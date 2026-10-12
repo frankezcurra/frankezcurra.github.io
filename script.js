@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const texto = "Frank Bendezu Ezcurra";
+  const texto = "Frank Ezcurra Bendezu";
   const elemento = document.getElementById("texto-escribir");
   let i = 0;
 
