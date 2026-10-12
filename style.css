@@ -45,6 +45,7 @@ body {
   color: var(--color-texto);
   letter-spacing: 1px;
   transition: transform 0.3s ease;
+  text-decoration: none;
 }
 
 .logo:hover {
@@ -1034,13 +1035,13 @@ body.light-mode .boton-tema {
     padding-left 0.3s ease;
   display: inline-flex;
   align-items: center;
-  gap: 10px; 
+  gap: 10px;
 }
 
 .footer-col ul li a i {
-  color: var(--color-principal); 
+  color: var(--color-principal);
   font-size: 0.9rem;
-  width: 16px; 
+  width: 16px;
   text-align: center;
 }
 
