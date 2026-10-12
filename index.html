@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frank Ezcurra | Backend dev.</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23121212'/><text x='50' y='72' font-size='70' font-family='Arial, sans-serif' font-weight='900' text-anchor='middle' fill='%2322d3ee'>F</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+      <div class="badge-ubicacion">
+        <span class="badge-texto">Ubicado en<br>Ayacucho - Perú</span>
+          <div class="badge-icono">
+            <svg viewBox="0 0 100 100" class="globo-lineas" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round">
+                <circle cx="50" cy="50" r="45"/>
+                <line x1="5" y1="50" x2="95" y2="50"/>
+                <ellipse cx="50" cy="50" rx="22" ry="45"/>
+                <ellipse cx="50" cy="50" rx="45" ry="22"/>
+            </svg>
+        </div>
+    </div>
+          <nav class="navbar">
+        <div class="logo">frankezcurra<span>.dev</span></div>
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#tecnologias">Tecnologías</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#formacion">Formación</a></li>
+        </ul>
+        <button id="boton-tema" class="boton-tema" title="Cambiar tema">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </nav>
+    </nav>
+       
+    <header class="hero">
+        <div class="hero-container">
+            
+            <div class="hero-texto">
+                
+                <span class="hero-etiqueta">HOLA, SOY</span>
+                
+                <h1 class="hero-nombre">
+                    <span id="texto-escribir"></span><span class="cursor">|</span>
+                </h1>
+
+                <div class="hero-rol">
+                    <i class="fa-solid fa-code"></i> Desarrollador Full Stack
+                </div>
+
+                <p class="hero-descripcion">
+                    Construyo aplicaciones web y sistemas completos — desde APIs RESTful y bases de datos, hasta interfaces modernas. Trabajo con <strong>Python</strong>, <strong>Laravel</strong>, <strong>FastAPI</strong> y <strong>Tailwind CSS</strong>.
+                </p>
+
+                <div class="hero-botones">
+                    <a href="#proyectos" class="boton-primario">
+                        Ver proyectos <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#" class="boton-secundario" title="Descargar CV">
+                        Currículum <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                        <div class="hero-stat">
+                        <span class="stat-numero stat-azul">3+</span>
+                 <span class="stat-etiqueta">Años Exp.</span>
+                            </div>
+                <div class="hero-stat">
+                         <span class="stat-numero stat-verde">4+</span>
+                        <span class="stat-etiqueta">Proyectos</span>
+                </div>
+                <div class="hero-stat">
+                <span class="stat-numero stat-morado">B2</span>
+                <span class="stat-etiqueta">Inglés</span>
+                </div>
+                    <div class="hero-stat">
+                <span class="stat-numero stat-morado">A1</span>
+                <span class="stat-etiqueta">Ruso</span>
+                </div>
+                </div>
+
+                <div class="hero-socials">
+                    <a href="https://github.com/frankangel" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/frank-ezcurra-7544a826b/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://instagram.com/zcurra_20/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/virgo.pe.peru" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/frank_ezcurra" target="_blank" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://wa.me/51971462235" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="hero-foto">
+                <div class="hero-foto-wrapper">
+                    <img src="foto-perfil.jpg" alt="Foto de Frank Angel">
+                </div>
+                <div class="hero-foto-info">
+                    <span class="hero-disponible">
+                        <span class="punto-verde"></span> Disponible
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+        <section id="proyectos">
+        <h2 class="aparecer">Mis Proyectos</h2>
+        
+        <article class="tarjeta aparecer">
+            <h3 class="project-title">Sistema de Garaje para el Arzobispado de Ayacucho</h3>
+            <p class="project-description">
+                Sistema de gestión de estacionamiento desarrollado en Python para el Arzobispado de Ayacucho. Controla el ingreso y retiro de carros y motos, calcula tarifas automáticamente, administra abonados mensuales, y genera tickets de pago en PDF con formato de impresión térmica. Cuenta con login de operadores, base de datos SQLite, reportes y una interfaz gráfica moderna en modo oscuro.
+            </p>
+            <div class="project-tech">
+                <span>Python</span>
+                <span>Tkinter</span>
+                <span>SQLite</span>
+                <span>ReportLab</span>
+            </div>
+        </article>
+
+        <article class="tarjeta aparecer">
+            <h3 class="project-title">Portafolio Web Personal</h3>
+            <p class="project-description">
+                Diseño y desarrollo de este portafolio . Incluye animaciones al hacer scroll, efecto máquina de escribir, dinámico, formulario interactivo y un reloj en vivo con la hora de Ayacucho. Todo construido con HTML, CSS y JavaScript puro.
+            </p>
+            <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+        </article>
+
+        <article class="tarjeta aparecer">
+            <h3 class="project-title">Sistema de Préstamos para la cooperativa Allus Peru</h3>
+            <p class="project-description">
+                Desarrollo de una aplicación web para la administración y control de préstamos para la cooperativa Allus Peru, construida durante el año 2024. El sistema fue desarrollado utilizando el framework Laravel para el backend, garantizando seguridad y escalabilidad, y Tailwind CSS para una interfaz de usuario moderna, responsiva y personalizada. El proyecto incluye gestión de usuarios, control de registros y una arquitectura MVC optimizada.
+            </p>
+            <div class="project-tech">
+                <span>Laravel</span>
+                <span>PHP</span>
+                <span>Tailwind CSS</span>
+                <span>MySQL</span>
+                <span>MVC</span>
+            </div>
+        </article>
+
+        <article class="tarjeta aparecer">
+            <h3 class="project-title">Próximo Proyecto</h3>
+            <p class="project-description">
+                Aquí irá mi siguiente proyecto. Estoy aprendiendo nuevas tecnologías y siempre buscando retos interesantes.
+            </p>
+            <div class="project-tech">
+                <span>En desarrollo</span>
+            </div>
+        </article>
+    </section>
+
+    <section id="sobre-mi" class="sobre-mi aparecer">
+        <div class="sobre-mi-container">
+        
+            <div class="sobre-mi-texto">
+                <span class="seccion-etiqueta">// ACERCA DE</span>
+                <h2 class="sobre-mi-titulo">Acerca de mí</h2>
+                
+                <p>
+                    Desarrollador de software centrado en Python, Laravel y desarrollo web. Actualmente trabajo creando APIs RESTful, modelando bases de datos y desarrollando aplicaciones completas, desde el backend hasta la interfaz de usuario.
+                </p>
+
+                <p>
+                    Cuento con una base sólida en estructuras de datos, algoritmos e ingeniería de software, conceptos que aplico diariamente en el diseño de sistemas reales. Mi enfoque está en escribir código limpio, mantenible y escalable.
+                </p>
+
+                <p>
+                    Creo que un buen código es aquel que otro desarrollador puede entender, mantener y evolucionar sin sorpresas. Cuando el proyecto lo requiere, también aporto en el frontend con HTML, CSS, JavaScript o Tailwind.
+                </p>
+            </div>
+
+            <div class="sobre-mi-especialidades">
+                
+                <div class="especialidad-card">
+                    <div class="especialidad-icono"><i class="fa-solid fa-code"></i></div>
+                    <h3>Desarrollo Backend</h3>
+                    <p>APIs RESTful con Python, Laravel y FastAPI — autenticación, autorización y documentación automática.</p>
+                </div>
+
+                <div class="especialidad-card">
+                    <div class="especialidad-icono"><i class="fa-solid fa-database"></i></div>
+                    <h3>Bases de Datos</h3>
+                    <p>Modelado relacional con SQLite, MySQL y PostgreSQL. Escritura de consultas eficientes y gestión de migraciones.</p>
+                </div>
+
+                <div class="especialidad-card">
+                    <div class="especialidad-icono"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3>Frontend y UI</h3>
+                    <p>Interfaces modernas con HTML, CSS, JavaScript y Tailwind CSS. Enfoque en diseño responsive y experiencia de usuario.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="tecnologias" class="tecnologias aparecer">
+        <div class="tecnologias-container">
+            
+            <span class="seccion-etiqueta">// PILA DE TECNOLOGÍA</span>
+            <h2 class="tecnologias-titulo">Tecnologías</h2>
+
+            <div class="tech-grid">
+                <div class="tech-categoria">
+                    <h4>Backend</h4>
+                    <div class="tech-chips">
+                        <span class="tech-chip"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="tech-chip"><i class="fa-brands fa-laravel"></i> Laravel</span>
+                        <span class="tech-chip"><i class="fa-brands fa-php"></i> PHP</span>
+                        <span class="tech-chip"><i class="fa-solid fa-bolt"></i> FastAPI</span>
+                        <span class="tech-chip"><i class="fa-brands fa-java"></i> Java</span>
+                    </div>
+                </div>
+
+                <div class="tech-categoria">
+                    <h4>Frontend</h4>
+                    <div class="tech-chips">
+                        <span class="tech-chip"><i class="fa-brands fa-html5"></i> HTML5</span>
+                        <span class="tech-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                        <span class="tech-chip"><i class="fa-brands fa-js"></i> JavaScript</span>
+                        <span class="tech-chip"><i class="fa-solid fa-wind"></i> Tailwind</span>
+                        <span class="tech-chip"><i class="fa-brands fa-vuejs"></i> Vue.js</span>
+                    </div>
+                </div>
+                <div class="tech-categoria">
+                    <h4>Bases de Datos</h4>
+                    <div class="tech-chips">
+                        <span class="tech-chip"><i class="fa-solid fa-database"></i> MySQL</span>
+                        <span class="tech-chip"><i class="fa-solid fa-database"></i> PostgreSQL</span>
+                        <span class="tech-chip"><i class="fa-solid fa-database"></i> SQLite</span>
+                    </div>
+                </div>
+                <div class="tech-categoria">
+                    <h4>DevOps y Herramientas</h4>
+                    <div class="tech-chips">
+                        <span class="tech-chip"><i class="fa-brands fa-docker"></i> Docker</span>
+                        <span class="tech-chip"><i class="fa-brands fa-git-alt"></i> Git</span>
+                        <span class="tech-chip"><i class="fa-brands fa-github"></i> GitHub</span>
+                        <span class="tech-chip"><i class="fa-solid fa-code"></i> VS Code</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencia" class="experiencia aparecer">
+        <div class="experiencia-container">
+            
+            <span class="seccion-etiqueta">// EXPERIENCIA</span>
+            <h2 class="experiencia-titulo">Experiencia</h2>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-puesto">Desarrollador de Software</h3>
+                                <p class="timeline-empresa">Sistema de Garaje — Arzobispado de Ayacucho</p>
+                            </div>
+                            <div class="timeline-fecha">
+                                <span>2024</span>
+                                <span class="badge-actual">Freelance</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-tareas">
+                            <li>Desarrollo de sistema de gestión de estacionamiento en Python para controlar el ingreso y retiro de vehículos.</li>
+                            <li>Implementación de login de operadores, base de datos SQLite y cálculo automático de tarifas.</li>
+                            <li>Generación de tickets de pago en PDF con formato de impresión térmica de 80mm usando ReportLab.</li>
+                            <li>Diseño de interfaz gráfica moderna en modo oscuro con Tkinter.</li>
+                            <li>Creación de reportes diarios, semanales y mensuales para la administración.</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>Python</span>
+                            <span>Tkinter</span>
+                            <span>SQLite</span>
+                            <span>ReportLab</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-puesto">Desarrollador Web</h3>
+                                <p class="timeline-empresa">Sistema de Préstamos — Cooperativa Allus Perú</p>
+                            </div>
+                            <div class="timeline-fecha">
+                                <span>2024</span>
+                                <span class="badge-actual">Freelance</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-tareas">
+                            <li>Desarrollo de una aplicación web robusta para la administración y control de préstamos.</li>
+                            <li>Backend construido con Laravel (PHP) garantizando seguridad y escalabilidad.</li>
+                            <li>Frontend moderno y responsivo con Tailwind CSS.</li>
+                            <li>Arquitectura MVC optimizada con gestión de usuarios y control de registros.</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>Laravel</span>
+                            <span>PHP</span>
+                            <span>Tailwind CSS</span>
+                            <span>MySQL</span>
+                            <span>MVC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-puesto">Formación en Desarrollo de Software</h3>
+                                <p class="timeline-empresa">Aprendizaje autodidacta y proyectos personales</p>
+                            </div>
+                            <div class="timeline-fecha">
+                                <span>2023 — Presente</span>
+                                <span class="badge-actual">En curso</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-tareas">
+                            <li>Formación continua en Python, Laravel, desarrollo web y bases de datos.</li>
+                            <li>Desarrollo de proyectos reales aplicando buenas prácticas y arquitecturas modernas.</li>
+                            <li>Estudio de estructuras de datos, algoritmos e ingeniería de software.</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>Python</span>
+                            <span>Laravel</span>
+                            <span>HTML/CSS/JS</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+   
+    <section id="formacion" class="formacion aparecer">
+        <div class="formacion-container">
+            
+            <span class="seccion-etiqueta">// ENTRENAMIENTO</span>
+            <h2 class="formacion-titulo">Formación</h2>
+
+            <div class="formacion-grid">
+
+                <div class="formacion-card">
+                    <div class="formacion-icono">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="formacion-info">
+                        <h3>Ingeniería de Sistemas</h3>
+                        <p class="formacion-institucion">UPC — Universidad Peruana de Ciencias Aplicadas</p>
+                        <p class="formacion-fecha">2026 — Presente</p>
+                    </div>
+                    <span class="formacion-badge badge-en-curso">En curso</span>
+                </div>
+
+                <div class="formacion-card">
+                    <div class="formacion-icono">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="formacion-info">
+                        <h3>Ingeniería de Software con IA</h3>
+                        <p class="formacion-institucion">SENATI — Servicio Nacional de Adiestramiento en Trabajo Industrial</p>
+                        <p class="formacion-fecha">2022 — 2025</p>
+                    </div>
+                    <span class="formacion-badge badge-completado">Completado</span>
+                </div>
+
+                <div class="formacion-card">
+                    <div class="formacion-icono">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="formacion-info">
+                        <h3>Ingeniería de Sistemas</h3>
+                        <p class="formacion-institucion">UTEL — Universidad Tecnológica Latinoamericana en Línea</p>
+                        <p class="formacion-fecha">2021 — 2023</p>
+                    </div>
+                    <span class="formacion-badge badge-completado">Completado</span>
+                </div>
+
+                <div class="formacion-card">
+                    <div class="formacion-icono">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="formacion-info">
+                        <h3>Ingeniería de Sistemas</h3>
+                        <p class="formacion-institucion">UNSCH — Universidad Nacional de San Cristóbal de Huamanga</p>
+                        <p class="formacion-fecha">2018 — 2021</p>
+                    </div>
+                    <span class="formacion-badge badge-no-completado">No completado</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+        <footer id="contacto" class="footer aparecer">
+        <div class="footer-container">
+            
+            <div class="footer-col">
+                <h3 class="footer-logo">frankezcurra<span>.dev</span></h3>
+                <p class="footer-desc">Desarrollador Web enfocado en Ingeniería de Sistemas. Creando soluciones digitales de alto impacto.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/frankangel" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://instagram.com/zcurra_20/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/virgo.pe.peru" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/frank-ezcurra-7544a826b/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://x.com/frank_ezcurra" target="_blank" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://wa.me/51971462235" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+               <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>
+                        <a href="mailto:frankezcurra771@gmail.com">
+                            <i class="fa-solid fa-envelope"></i> frankezcurra771@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+51971462235">
+                            <i class="fa-solid fa-phone"></i> Lláma a Frank
+                        </a>
+                    </li>
+                </ul>
+                <div class="separador-footer"></div>
+                <div class="reloj-local">
+                    <span class="reloj-etiqueta">Hora local en Ayacucho</span>
+                    <span class="reloj-hora" id="reloj-ayacucho">--:-- --</span>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Mantente actualizado</h4>
+                <p>Suscríbete para recibir novedades sobre mis proyectos.</p>
+                <form class="footer-form" id="formulario-suscripcion">
+                    <input type="text" id="input-nombre" placeholder="Nombre" required>
+                    <div class="input-con-flecha">
+                        <input type="email" id="input-correo" placeholder="Correo electrónico" required>
+                        <button type="submit" class="boton-flecha">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </form>
+                <p id="mensaje-gracias" style="display: none; color: var(--color-principal); margin-top: 15px; font-weight: 600;">
+                    ¡Gracias por suscribirte, <span id="nombre-usuario"></span>! ✨
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-desarrollado">Desarrollado con <span class="corazon">❤️</span> usando HTML, CSS y JavaScript</p>
+            <p>© 2026 - Frank Ezcurra. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
