@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  
   const preloader = document.getElementById("preloader");
 
   if (preloader) {
@@ -20,14 +21,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const elementosInteractivos = document.querySelectorAll(
-      "a, button, .tech-chip, .tarjeta, .formacion-card",
+      "a, button, .tech-chip, .tarjeta, .formacion-card"
     );
     elementosInteractivos.forEach((el) => {
       el.addEventListener("mouseenter", () =>
-        cursorCirculo.classList.add("hover"),
+        cursorCirculo.classList.add("hover")
       );
       el.addEventListener("mouseleave", () =>
-        cursorCirculo.classList.remove("hover"),
+        cursorCirculo.classList.remove("hover")
       );
     });
   }
@@ -58,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       threshold: 0.15,
-    },
+    }
   );
 
   elementosAnimar.forEach((elemento) => {
@@ -122,4 +123,34 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   setInterval(actualizarReloj, 1000);
   actualizarReloj();
+
+  const sonidoHover = new Audio("hover.mp3");
+  const sonidoClick = new Audio("click.mp3");
+
+  sonidoHover.volume = 0.10;
+  sonidoClick.volume = 0.15;
+
+  const elementosConSonido = document.querySelectorAll(
+    "a, button, .tech-chip, .tarjeta, .formacion-card"
+  );
+
+  let usuarioInteractuo = false;
+  document.addEventListener("click", () => {
+    usuarioInteractuo = true;
+  }, { once: true });
+
+  elementosConSonido.forEach((elemento) => {
+    elemento.addEventListener("mouseenter", () => {
+      if (usuarioInteractuo) {
+        sonidoHover.currentTime = 0;
+        sonidoHover.play().catch(() => {});
+      }
+    });
+    elemento.addEventListener("click", () => {
+      usuarioInteractuo = true;
+      sonidoClick.currentTime = 0;
+      sonidoClick.play().catch(() => {});
+    });
+  });
+
 });

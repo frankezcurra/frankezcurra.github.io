@@ -1685,3 +1685,6 @@ body.light-mode .footer-desarrollado {
     display: none;
   }
 }
+audio {
+  display: none;
+}
