@@ -1689,3 +1689,7 @@ body.light-mode .footer-desarrollado {
 audio {
   display: none;
 }
+
+.navbar > .boton-tema:first-of-type {
+  margin-left: auto;
+}
