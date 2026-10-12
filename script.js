@@ -140,17 +140,58 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { once: true });
 
   elementosConSonido.forEach((elemento) => {
+
     elemento.addEventListener("mouseenter", () => {
-      if (usuarioInteractuo) {
+      if (usuarioInteractuo && localStorage.getItem("sonido") !== "off") {
         sonidoHover.currentTime = 0;
         sonidoHover.play().catch(() => {});
       }
     });
+
     elemento.addEventListener("click", () => {
       usuarioInteractuo = true;
-      sonidoClick.currentTime = 0;
-      sonidoClick.play().catch(() => {});
+      if (localStorage.getItem("sonido") !== "off") {
+        sonidoClick.currentTime = 0;
+        sonidoClick.play().catch(() => {});
+      }
     });
+  });
+
+  const botonSonido = document.getElementById("boton-sonido");
+  const iconoSonido = botonSonido.querySelector("i");
+
+  const sonidoOn = new Audio("sonido-on.mp3");
+  const sonidoOff = new Audio("sonido-off.mp3");
+  sonidoOn.volume = 0.3;
+  sonidoOff.volume = 0.3;
+
+  let sonidoActivado = localStorage.getItem("sonido") !== "off";
+
+  function actualizarIconoSonido() {
+    if (sonidoActivado) {
+      iconoSonido.classList.remove("fa-volume-xmark");
+      iconoSonido.classList.add("fa-volume-high");
+    } else {
+      iconoSonido.classList.remove("fa-volume-high");
+      iconoSonido.classList.add("fa-volume-xmark");
+    }
+  }
+  actualizarIconoSonido();
+
+  botonSonido.addEventListener("click", () => {
+    sonidoActivado = !sonidoActivado;
+
+    if (sonidoActivado) {
+      sonidoOn.currentTime = 0;
+      sonidoOn.play().catch(() => {});
+    } else {
+      sonidoOff.currentTime = 0;
+      sonidoOff.play().catch(() => {});
+    }
+
+    localStorage.setItem("sonido", sonidoActivado ? "on" : "off");
+
+    actualizarIconoSonido();
   });
 
 });

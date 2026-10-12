@@ -33,6 +33,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 15px;
   padding: 20px 50px;
   background: rgba(18, 18, 18, 0.8);
   backdrop-filter: blur(10px);
