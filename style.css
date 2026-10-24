@@ -26,21 +26,19 @@ body {
 }
 
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 20px 50px;
-  background: rgba(18, 18, 18, 0.8);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 50px;
+    background: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -1850,4 +1848,16 @@ body.light-mode .curso-tags span {
         flex-direction: column;
         padding: 25px;
     }
+}
+
+.nav-links {
+    margin-left: auto;     
+    margin-right: 20px;    
+}
+
+.nav-botones {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 0;       
 }
