@@ -1693,3 +1693,161 @@ audio {
 .navbar > .boton-tema:first-of-type {
   margin-left: auto;
 }
+
+/* =========================================
+   SECCIÓN CURSOS PARA NIÑOS
+   ========================================= */
+.cursos {
+    padding: 120px 50px;
+    background-color: var(--color-fondo);
+    border-top: 1px solid #222;
+}
+
+.cursos-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.cursos-titulo {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-texto);
+    margin-bottom: 60px;
+    letter-spacing: -2px;
+    text-transform: none;
+    padding: 0;
+}
+
+.cursos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos tarjetas lado a lado */
+    gap: 30px;
+}
+
+.curso-card {
+    display: flex;
+    gap: 25px;
+    background-color: var(--color-fondo-alt);
+    border: 1px solid #2a2a2a;
+    border-radius: 20px;
+    padding: 35px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de luz sutil al pasar el mouse */
+.curso-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(34, 211, 238, 0.1), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.curso-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-principal);
+    box-shadow: 0 10px 30px rgba(34, 211, 238, 0.15); /* Sombra cian */
+}
+
+.curso-card:hover::before {
+    opacity: 1;
+}
+
+.curso-icono {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(34, 211, 238, 0.1);
+    color: var(--color-principal);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.curso-info {
+    flex: 1;
+}
+
+.curso-info h3 {
+    color: var(--color-texto);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.curso-desc {
+    color: #aaa;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.curso-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.curso-tags span {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    background-color: transparent;
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: #888;
+    transition: all 0.3s ease;
+}
+
+.curso-card:hover .curso-tags span {
+    border-color: var(--color-principal);
+    color: var(--color-principal);
+}
+
+/* Modo claro */
+body.light-mode .cursos {
+    border-top: 1px solid #ddd;
+}
+
+body.light-mode .curso-card {
+    background-color: #fff;
+    border-color: #e5e5e5;
+}
+
+body.light-mode .curso-info h3 {
+    color: #121212;
+}
+
+body.light-mode .curso-desc {
+    color: #555;
+}
+
+body.light-mode .curso-tags span {
+    border-color: #ddd;
+    color: #666;
+}
+
+/* Responsive: en móvil se pone una columna */
+@media (max-width: 900px) {
+    .cursos {
+        padding: 80px 20px;
+    }
+    .cursos-titulo {
+        font-size: 2rem;
+    }
+    .cursos-grid {
+        grid-template-columns: 1fr;
+    }
+    .curso-card {
+        flex-direction: column;
+        padding: 25px;
+    }
+}
